@@ -52,7 +52,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nr{display:flex;align-items:center;gap:8px}
 .nm{width:36px;height:36px;border-radius:50%;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--mid);transition:all .2s}
 .nm:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-@media(max-width:860px){.nl{display:none}}
+@media(max-width:860px){
+  .sec{padding:60px 0}
+  .hstats{grid-template-columns:repeat(2,1fr)}
+  
+  /* МОБИЛЬНЫЙ HERO — как у Цацагрум */
+  .hero{min-height:auto;padding-top:88px;padding-bottom:48px;background:#fff !important}
+  .hero-video{display:none}
+  .hero-overlay{display:none}
+  .hero h1{color:var(--dark) !important;font-size:1.8rem}
+  .hero h1 .ac{color:var(--blue) !important}
+  .hero-content{max-width:100%}
+  .hsub{color:var(--mid) !important}
+  .hdesc{color:var(--mid) !important}
+  .htag{background:rgba(37,99,235,.1) !important;border-color:rgba(37,99,235,.2) !important}
+  .htxt{color:var(--blue) !important}
+  .dot{background:var(--blue) !important;animation:none}
+  .hurg{color:var(--muted) !important}
+  .hstats{background:var(--border) !important}
+  .hs{background:var(--white) !important}
+  .hsn{color:var(--blue) !important}
+  .hsl{color:var(--muted) !important}
+  .scroll-hint{display:none}
+  .hero-mobile-video{display:block !important}
+}
 
 /* HERO */
 .hero{min-height:100vh;padding-top:68px;display:flex;align-items:center;position:relative;overflow:hidden;background:#000}
@@ -244,10 +267,9 @@ footer{background:var(--dark);padding:52px 0 28px}
       <a href="https://t.me/zarinacleaning" class="nm" target="_blank" title="Telegram">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.617l-2.95-.924c-.64-.203-.654-.64.136-.954l11.57-4.461c.537-.194 1.006.131.836.97z"/></svg>
       </a>
-      <a href="https://max.ru/" class="nm" target="_blank" title="Max">
+      <a href="https://max.ru/u/f9LHodD0cOLImf6pf7Nmml711Rk4M5qCenzG6REz-q1nQyj86Z83oxsdPSM" class="nm" target="_blank" title="Max">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
       </a>
-      <a href="tel:+79048701385" style="font-size:13px;font-weight:700;color:var(--dark);white-space:nowrap">+7 (904) 870-13-85</a>
       <a href="#contact" class="btn bp" style="padding:10px 20px;font-size:12px">Получить расчёт</a>
     </div>
   </div>
@@ -263,6 +285,10 @@ footer{background:var(--dark);padding:52px 0 28px}
       <h1 class="fade" data-d="1">Откроем клининговый бизнес <span class="ac">под ключ</span> за 30 дней</h1>
       <p class="hsub fade" data-d="2">с доходом от 250 000 рублей в месяц</p>
       <p class="hdesc fade" data-d="2">Сопровождение вместо франшизы. Без роялти.<br>Настроим процессы и приведём первых клиентов.</p>
+      <!-- МОБИЛЬНОЕ ВИДЕО — только на телефоне -->
+      <div class="hero-mobile-video" style="display:none;width:100%;margin:20px 0 24px;border-radius:16px;overflow:hidden">
+        <video src="hero.MOV" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" autoplay muted loop playsinline></video>
+      </div>
       <div class="hctas fade" data-d="3">
         <a href="#contact" class="btn bp">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -555,7 +581,7 @@ footer{background:var(--dark);padding:52px 0 28px}
           <a href="https://vk.com/cleaningzarinayakhina" class="nm" target="_blank" title="ВКонтакте">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.585-1.496c.598-.19 1.364 1.26 2.177 1.815.614.418 1.08.326 1.08.326l2.17-.03s1.135-.07.597-.964c-.044-.073-.314-.661-1.618-1.869-1.364-1.265-1.182-1.06.462-3.246.999-1.33 1.398-2.142 1.272-2.490-.12-.332-.854-.244-.854-.244l-2.444.015s-.181-.025-.315.055c-.132.078-.217.260-.217.260s-.387 1.03-.903 1.905c-1.088 1.847-1.523 1.945-1.700 1.830-.414-.267-.31-1.073-.31-1.646 0-1.790.272-2.535-.529-2.723-.265-.064-.460-.106-1.138-.113-.870-.009-1.606.003-2.022.207-.277.136-.491.439-.361.456.161.021.527.099.721.363.250.340.241 1.104.241 1.104s.144 2.108-.335 2.370c-.328.178-.778-.185-1.744-1.843-.496-.858-.871-1.807-.871-1.807s-.072-.176-.202-.271c-.157-.115-.376-.151-.376-.151l-2.322.015s-.349.010-.477.162C4.012 8.03 4.110 8.350 4.110 8.350s1.817 4.252 3.872 6.395c1.886 1.970 4.028 1.841 4.028 1.841h.970z"/></svg>
           </a>
-          <a href="https://max.ru/" class="nm" target="_blank" title="Max">
+          <a href="https://max.ru/u/f9LHodD0cOLImf6pf7Nmml711Rk4M5qCenzG6REz-q1nQyj86Z83oxsdPSM" class="nm" target="_blank" title="Max">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2.5 2.5L16 9"/></svg>
           </a>
         </div>
